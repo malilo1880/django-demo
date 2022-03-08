@@ -1,0 +1,16 @@
+{%  extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+      {% for obj in userlist %}
+<div class="container" style="width: 500px;height: 500px;margin: 10px;">
+      <img src="{{obj.image.url}}" alt="" class=" b-rounded" style="border-radius: 50%;width: 150px;height: 150px;">
+      <div class="sm" style="margin-top: 10px;">{{obj.name}}</div>
+      <div class="sm" style="margin-top: 10px;">{{obj.phone}}</div>
+</div>
+      
+      {% endfor %}
+
+</div>
+
+{% endblock %}

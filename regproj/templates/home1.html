@@ -1,0 +1,13 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+      <h2>Home page</h2>
+      {% if registered %}
+      <h3 style="color: green;">{{success}}</h3>
+      {% else %}
+      <a href="{% url 'register' %}">Register</a>
+      {% endif %}
+      
+      <h4>Welcome {{name}}</h4>
+      <a href="{% url 'display' %}">List of users</a>
+{% endblock %}
